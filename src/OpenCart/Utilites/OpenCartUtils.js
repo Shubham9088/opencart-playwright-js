@@ -18,12 +18,12 @@ export default class OpenCartUtils extends BaseHelper{
 
     /**
      * Launch to registration page and register new user
-     * @param {*} fname first name of user
-     * @param {*} lname last name of user
-     * @param {*} email email of user
-     * @param {*} telephone mobile no of user
-     * @param {*} password password of user
-     * @param {*} conformPassword conform password of user
+     * @param {string} fname first name of user
+     * @param {string} lname last name of user
+     * @param {string} email email of user
+     * @param {string} telephone mobile no of user
+     * @param {string} password password of user
+     * @param {string} conformPassword conform password of user
      * @author shchak
      */
     async registerNewUser(fname,lname,email,telephone,password,conformPassword){

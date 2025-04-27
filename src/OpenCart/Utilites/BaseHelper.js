@@ -65,8 +65,8 @@ export class BaseHelper{
 
     /**
      * Select checkbox based on the locator and dynamic values
-     * @param {*} locatorKey Key to fetch the locator template from locator object
-     * @param {*} value value Dynamic values (like text, class) to replace in locator template
+     * @param {string} locatorKey Key to fetch the locator template from locator object
+     * @param {string} value value Dynamic values (like text, class) to replace in locator template
      * @author shchak
      */
     async selectCheckBox(locatorKey, value){
@@ -81,8 +81,8 @@ export class BaseHelper{
 
     /**
      * Click button based on the locator and dynamic values
-     * @param {*} locatorKey Key to fetch the locator template from locator object
-     * @param {*} value value Dynamic values (like text, class) to replace in locator template
+     * @param {string} locatorKey Key to fetch the locator template from locator object
+     * @param {string} value value Dynamic values (like text, class) to replace in locator template
      * @author shchak
      */
     async clickButton(locatorKey, value){
@@ -97,8 +97,8 @@ export class BaseHelper{
 
     /**
      * Verify text is visible or not based on the locator and dynamic values
-     * @param {*} locatorKey Key to fetch the locator template from locator object
-     * @param {*} value value Dynamic values (like text, class) to replace in locator template
+     * @param {string} locatorKey Key to fetch the locator template from locator object
+     * @param {string} value value Dynamic values (like text, class) to replace in locator template
      * @author shchak
      */
     async verifyText(locatorKey, value){
