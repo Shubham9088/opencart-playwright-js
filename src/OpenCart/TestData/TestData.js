@@ -1,4 +1,15 @@
 export const TestData={
+    loginData:{
+        invalidData:{
+            user1:{userame:"Test",username:"Test"},
+            user2:{username:"", password:"Test@123"},
+            user3:{username:"Test@gmail.com",password:""},
+            user4:{username:"", password:""}
+        },
+        validData:{
+            user1:{username:"shubhamchakole22@gmail.com",password:"Shubham@123"}
+        }
+    },
     userDetails:{
         fname:"shubham",
         lname:"chakole",
@@ -12,7 +23,8 @@ export const TestData={
     },
     errorMessage:{
         emailAlreadyExist:"E-Mail Address is already registered!",
-        confirmPasswordDoesNotMatch:"Password confirmation does not match password!"
+        confirmPasswordDoesNotMatch:"Password confirmation does not match password!",
+        invalidloginDetails:"No match for E-Mail Address and/or Password."
     },
     class:{
         dropdown:"dropdown"
@@ -32,7 +44,8 @@ export const TestData={
         email:"E-Mail",
         telephone:"Telephone",
         password:"Password",
-        conformPassword:"Password Confirm"
+        conformPassword:"Password Confirm",
+        username:"E-Mail Address",
     },
     checkbox:{
         registrationCheckBox:"I have read and agree to the"
@@ -40,5 +53,5 @@ export const TestData={
     type:{
         checkbox:"checkbox",
         submit:"submit"
-    }
+    },
 }

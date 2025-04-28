@@ -36,6 +36,7 @@ export default class OpenCartUtils extends BaseHelper{
         await this.enterTextInInputField(locator.objByPlaceholder,{text: TestData.placeHolder.conformPassword},conformPassword);
         await this.selectCheckBox(locator.objByTextAndType,{text:TestData.checkbox.registrationCheckBox,type:TestData.type.checkbox});
         await this.clickButton(locator.objByTypeAndValue,{type: TestData.type.submit,value:TestData.text.continueBtn});
+        
     }
 
     /**
@@ -43,8 +44,19 @@ export default class OpenCartUtils extends BaseHelper{
      * @param {string} message error message 
      * @author shchak
      */
-    async verifyErrorMessage(message){
+    async verifyMessage(message){
         await this.verifyText(locator.objByText,{text:message});
+    }
+
+    async loginUser(username, password){
+        //launch login page
+        await this.selectOptionFromDropDown(locator.objByClassAndText,{class:TestData.class.dropdown, text:TestData.dropdown.myAccount},{text:TestData.text.login});
+        //enter username
+        await this.enterTextInInputField(locator.objByPlaceholder,{text:TestData.placeHolder.username}, username);
+        //enter password
+        await this.enterTextInInputField(locator.objByPlaceholder,{text:TestData.placeHolder.password}, password);
+        //clicking on login button
+        await this.clickButton(locator.objByTypeAndValue,{type:TestData.type.submit, value:TestData.text.login});
     }
 
 }

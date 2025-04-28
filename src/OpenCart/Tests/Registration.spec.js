@@ -7,7 +7,7 @@ test.describe("Registration test case",()=>{
 
     test.beforeEach(async({page})=>{
         openCartUtil=new OpenCartUtils(page);
-        await page.goto("https://tutorialsninja.com/demo/");
+        await page.goto("/demo");
     });
 
     /**
@@ -16,7 +16,7 @@ test.describe("Registration test case",()=>{
      */
     test("Test error message for already registered email", async()=>{
         await openCartUtil.registerNewUser(TestData.userDetails.fname,TestData.userDetails.lname,TestData.userDetails.email,TestData.userDetails.mobile,TestData.userDetails.password,TestData.userDetails.conformPassword.actualPass);
-        await openCartUtil.verifyErrorMessage(TestData.errorMessage.emailAlreadyExist);
+        await openCartUtil.verifyMessage(TestData.errorMessage.emailAlreadyExist);
     });
 
     /**
@@ -25,7 +25,7 @@ test.describe("Registration test case",()=>{
      */
     test("Test error message for incorrect confirm password",async()=>{
         await openCartUtil.registerNewUser(TestData.userDetails.fname,TestData.userDetails.lname,TestData.userDetails.email,TestData.userDetails.mobile,TestData.userDetails.password,TestData.userDetails.conformPassword.incorrectPass);
-        await openCartUtil.verifyErrorMessage(TestData.errorMessage.confirmPasswordDoesNotMatch);
+        await openCartUtil.verifyMessage(TestData.errorMessage.confirmPasswordDoesNotMatch);
     });
 
 });
