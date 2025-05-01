@@ -36,7 +36,8 @@ export const TestData={
     text:{
         login: "Login",
         register: "Register",
-        continueBtn:"Continue"
+        continueBtn:"Continue",
+        editAccount:"Edit your account information"
     },
     placeHolder:{
         fname:"First Name",
