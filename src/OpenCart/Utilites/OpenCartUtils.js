@@ -59,4 +59,16 @@ export default class OpenCartUtils extends BaseHelper{
         await this.clickButton(locator.objByTypeAndValue,{type:TestData.type.submit, value:TestData.text.login});
     }
 
+    async clickByText(text){
+        await this.clickButton(locator.objByText,{text:text});
+    }
+
+    async enterTextByPlaceholder(placeholder,text){
+        await this.enterTextInInputField(locator.objByPlaceholder,{text:placeholder},text);
+    }
+
+    async clickButtonByTypeAndValue(type,value){
+        await this.clickButton(locator.objByTypeAndValue,{type:type, value:value})
+    }
+
 }

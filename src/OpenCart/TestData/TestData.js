@@ -37,7 +37,9 @@ export const TestData={
         login: "Login",
         register: "Register",
         continueBtn:"Continue",
-        editAccount:"Edit your account information"
+        editAccount:"Edit your account information",
+        myAccount:"My Account Information",
+        personalDetails:"Your Personal Details"
     },
     placeHolder:{
         fname:"First Name",
@@ -55,4 +57,7 @@ export const TestData={
         checkbox:"checkbox",
         submit:"submit"
     },
+    message:{
+        updateAccount:"Success: Your account has been successfully updated."
+    }
 }
