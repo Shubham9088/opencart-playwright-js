@@ -13,7 +13,7 @@ export default class OpenCartUtils extends BaseHelper{
      * @author shchak
      */
     async launchRegistrationPage(){
-        await this.selectOptionFromDropDown(locator.objByClassAndText,{class:TestData.class.dropdown, text:TestData.dropdown.myAccount},{text:TestData.text.register});
+        await this.selectOptionFromDropDown(locator.objByClassAndText,{class:TestData.class.dropdown, text:TestData.dropdown.myAccount},{class:TestData.class.dropdownMenu,text:TestData.text.register});
     }
 
     /**
@@ -50,7 +50,7 @@ export default class OpenCartUtils extends BaseHelper{
 
     async loginUser(username, password){
         //launch login page
-        await this.selectOptionFromDropDown(locator.objByClassAndText,{class:TestData.class.dropdown, text:TestData.dropdown.myAccount},{text:TestData.text.login});
+        await this.selectOptionFromDropDown(locator.objByClassAndText,{class:TestData.class.dropdown, text:TestData.dropdown.myAccount},{class:TestData.class.dropdownMenu,text:TestData.text.login});
         //enter username
         await this.enterTextInInputField(locator.objByPlaceholder,{text:TestData.placeHolder.username}, username);
         //enter password

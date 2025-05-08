@@ -4,5 +4,7 @@ export const locator={
     objByPlaceholder:"//*[@placeholder='${text}']",
     objByTypeAndValue:"//*[@type='${type}' and @value='${value}']",
     objByName:"//*[@name='${text}']",
-    objByTextAndType:"//*[contains(text(),'${text}')]/*[@type='${type}']"
+    objByTextAndType:"//*[contains(text(),'${text}')]/*[@type='${type}']",
+    objByTitle:"//*[@title='${title}']",
+    dropdownOption:"//*[contains(@class,'${class}')]//*[contains(text(),'${text}')]"
 }

@@ -47,8 +47,9 @@ export class BaseHelper{
      */
     async selectOptionFromDropDown(locatorKey, value, option){
         const dropdown = this.page.locator("xpath="+this.getELementXpath(locatorKey,value));
-        const optionLoc= this.page.locator("xpath="+this.getELementXpath(locator.objByText,option));
+        const optionLoc= this.page.locator("xpath="+this.getELementXpath(locator.dropdownOption,option));
         try{
+            await dropdown.waitFor({state:'visible'});
             await dropdown.click();
             logger.info("Dropdown clicked");
             try{

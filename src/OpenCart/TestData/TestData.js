@@ -27,10 +27,11 @@ export const TestData={
         invalidloginDetails:"No match for E-Mail Address and/or Password."
     },
     class:{
-        dropdown:"dropdown"
+        dropdown:"dropdown",
+        dropdownMenu:"dropdown-menu"
     },
     dropdown:{
-        myAccount: "My Account"
+        myAccount: "My Account" 
     },
 
     text:{

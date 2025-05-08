@@ -44,10 +44,20 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: process.env.PW_BROWSER ? process.env.PW_BROWSER :'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      name: 'login',
+      testMatch: /.*login\.setup\.spec\.js/,
+    },
+    {
+      name: 'auth-test',
+      use: {storageState:'storageState.json'},
+      dependencies: ['login'],
+      testMatch:/.*(ManageUser)\.spec\.js$/
+    },
+    {
+      name: 'public-test',
+      use: {storageState:undefined},
+      testMatch: /.*(Login|Registration)\.spec\.js$/
     }
-    
   ],
 
   /* Run your local dev server before starting the tests */
