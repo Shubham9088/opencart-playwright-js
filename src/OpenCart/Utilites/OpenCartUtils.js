@@ -41,13 +41,19 @@ export default class OpenCartUtils extends BaseHelper{
 
     /**
      * Verify error message
-     * @param {string} message error message 
+     * @param {string} message error message
      * @author shchak
      */
     async verifyMessage(message){
         await this.verifyText(locator.objByText,{text:message});
     }
 
+    /**
+     * Login to open cart application
+     * @param {string} username username to login to open cart application 
+     * @param {*} password password to login to open cart application
+     * @author shchak
+     */
     async loginUser(username, password){
         //launch login page
         await this.selectOptionFromDropDown(locator.objByClassAndText,{class:TestData.class.dropdown, text:TestData.dropdown.myAccount},{class:TestData.class.dropdownMenu,text:TestData.text.login});
@@ -59,14 +65,31 @@ export default class OpenCartUtils extends BaseHelper{
         await this.clickButton(locator.objByTypeAndValue,{type:TestData.type.submit, value:TestData.text.login});
     }
 
+    /**
+     * click on text
+     * @param {string} text text to click
+     * @author shchak
+     */
     async clickByText(text){
         await this.clickButton(locator.objByText,{text:text});
     }
 
+    /**
+     * Enter text in input field 
+     * @param {string} placeholder placeholder of input field
+     * @param {string} text text to enter in input field
+     * @author shchak
+     */
     async enterTextByPlaceholder(placeholder,text){
         await this.enterTextInInputField(locator.objByPlaceholder,{text:placeholder},text);
     }
 
+    /**
+     * click a button
+     * @param {string} type type of a button
+     * @param {string} value value of a button
+     * @author shchak
+     */
     async clickButtonByTypeAndValue(type,value){
         await this.clickButton(locator.objByTypeAndValue,{type:type, value:value})
     }

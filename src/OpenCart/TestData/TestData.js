@@ -7,7 +7,7 @@ export const TestData={
             user4:{username:"", password:""}
         },
         validData:{
-            user1:{username:"shubhamchakole22@gmail.com",password:"Shubham@123"}
+            user1:{username:process.env.PW_Email,password:process.env.PW_Password}
         }
     },
     userDetails:{
